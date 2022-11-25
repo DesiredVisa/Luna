@@ -1,0 +1,4 @@
+-- why u here? --
+print('hewwo :3')
+task.wait(1)
+print('not done yet :D')
