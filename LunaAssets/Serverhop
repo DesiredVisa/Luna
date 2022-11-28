@@ -9,8 +9,6 @@ for i = 1,pagesToSearch do
 			table.insert(GUIDs, {id = v.id, users = v.playing})
 		end
 	end
-	print('Searching for server')
 	if Http.nextPageCursor ~= null then Http = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/"..game.PlaceId.."/servers/Public?sortOrder=Asc&limit=100&cursor="..Http.nextPageCursor)) else break end
 end
-print('Attempting to TP')
 game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, GUIDs[math.random(1,#GUIDs)].id, game.Players.LocalPlayer)
