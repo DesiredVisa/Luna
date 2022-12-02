@@ -242,7 +242,7 @@ local xlp = {
         end
     end,
     ['suffixstring'] = function(st)
-        local suffixes = {"k", "m", "b", "t", "q", "Q", "sx", "sp", "o", "n", "d"}
+        local suffixes = {"K", "M", "B", "T", "Qa"}
         for i = #suffixes, 1, -1 do
             local mp = math.pow(10, i * 3)
             if st >= mp then
